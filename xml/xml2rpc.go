@@ -36,6 +36,7 @@ type value struct {
 	String   string   `xml:"string"`
 	Int      string   `xml:"int"`
 	Int4     string   `xml:"i4"`
+	Int8     string   `xml:"i8"`
 	Double   string   `xml:"double"`
 	Boolean  string   `xml:"boolean"`
 	DateTime string   `xml:"dateTime.iso8601"`
@@ -116,6 +117,8 @@ func value2Field(value value, field *reflect.Value) error {
 		val, _ = strconv.Atoi(value.Int)
 	case value.Int4 != "":
 		val, _ = strconv.Atoi(value.Int4)
+	case value.Int8 != "":
+		val, _ = strconv.Atoi(value.Int8)
 	case value.Double != "":
 		val, _ = strconv.ParseFloat(value.Double, 64)
 	case value.String != "":

@@ -9,7 +9,7 @@ Installation
 
 Assuming you already imported gorilla/rpc, use the following command:
 
-    go get github.com/divan/gorilla-xmlrpc/xml
+    go get github.com/josiah2009/gorilla-xmlrpc/xml
 
 Implementation details
 
@@ -28,6 +28,7 @@ The following types are supported:
     XML-RPC             Golang
     -------             ------
     int, i4             int
+    i8			int64
     double              float64
     boolean             bool
     stringi             string

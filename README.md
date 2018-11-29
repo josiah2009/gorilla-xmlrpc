@@ -1,7 +1,7 @@
 # gorilla-xmlrpc #
 
-[![Build Status](https://drone.io/github.com/divan/gorilla-xmlrpc/status.png)](https://drone.io/github.com/divan/gorilla-xmlrpc/latest)
-[![GoDoc](https://godoc.org/github.com/divan/gorilla-xmlrpc/xml?status.svg)](https://godoc.org/github.com/divan/gorilla-xmlrpc/xml)
+[![Build Status](https://drone.io/github.com/josiah2009/gorilla-xmlrpc/status.png)](https://drone.io/github.com/josiah2009/gorilla-xmlrpc/latest)
+[![GoDoc](https://godoc.org/github.com/josiah2009/gorilla-xmlrpc/xml?status.svg)](https://godoc.org/github.com/josiah2009/gorilla-xmlrpc/xml)
 
 XML-RPC implementation for the Gorilla/RPC toolkit.
 
@@ -13,7 +13,7 @@ Unlike net/rpc from Go strlib, gorilla/rpc allows usage of HTTP POST requests fo
 ### Installation ###
 Assuming you already imported gorilla/rpc, use the following command:
 
-    go get github.com/divan/gorilla-xmlrpc/xml
+    go get github.com/josiah2009/gorilla-xmlrpc/xml
 
 ### Examples ###
 
@@ -26,7 +26,7 @@ import (
     "log"
     "net/http"
     "github.com/gorilla/rpc"
-    "github.com/divan/gorilla-xmlrpc/xml"
+    "github.com/josiah2009/gorilla-xmlrpc/xml"
 )
 
 type HelloService struct{}
@@ -66,7 +66,7 @@ import (
     "log"
     "bytes"
     "net/http"
-    "github.com/divan/gorilla-xmlrpc/xml"
+    "github.com/josiah2009/gorilla-xmlrpc/xml"
 )
 
 func XmlRpcCall(method string, args struct{Who string}) (reply struct{Message string}, err error) {
@@ -110,6 +110,7 @@ For the better understanding, I use terms 'rpc2xml' and 'xml2rpc' instead of 'ma
 | XML-RPC          | Golang        |
 | ---------------- | ------------- |
 | int, i4          | int           |
+| i8               | int64         |
 | double           | float64       |
 | boolean          | bool          |
 | string           | string        |
